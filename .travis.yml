@@ -9,7 +9,7 @@ jdk:
     - openjdk7
 
 before_install:
-    - mysql -u root -e "CREATE DATABASE Acme\-Pad\-Thai;"
+    - mysql -u root -e "CREATE DATABASE \'Acme-Pad-Thai\';"
     - mysql -u root -e "CREATE USER 'acme-manager'@'%' IDENTIFIED BY 'ACME-M@n@ger-6874';"
     - mysql -u root -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, TRIGGER ON *.* TO 'del-manager'@'%' IDENTIFIED BY 'ACME-M@n@ger-6874' WITH GRANT OPTION;"
     - mysql -u root -e "CREATE USER 'acme-user'@'%' IDENTIFIED BY 'ACME-Us3r-P@ssw0rd';"
