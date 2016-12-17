@@ -143,21 +143,6 @@ public class MasterClassServiceTest extends AbstractTest {
 	}
 	
 	@Test
-	public void testRegisterActor2() {
-		authenticate("cook1");
-
-		MasterClass m;
-		m = masterClassService.findOne(207);
-
-		masterClassService.registerActor(m);
-
-		Assert.isTrue(actorService.findByPrincipal().getMasterClasses()
-				.contains(m));
-		
-		unauthenticate();
-	}
-	
-	@Test
 	public void testFindAttenders() {
 		MasterClass m;
 		m = masterClassService.findOne(206);
