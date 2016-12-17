@@ -29,11 +29,17 @@ public abstract class AbstractTest {
 	
 	// Set up and tear down -------------------------------
 	
-	@Before
-	public void setUp() {
-//		 Uncomment the following line if you wish your database to be re-populated on every test.
-		 PopulateDatabase.main(null);
-	}
+	 private static boolean populate = true;
+	  
+	  @Before
+	  public void setUp() {
+	    if(populate) {
+	      PopulateDatabase.main(null);
+	      populate = false;
+	    }
+	    
+	    unauthenticate();
+	  }
 	
 	@After
 	public void tearDown() {
