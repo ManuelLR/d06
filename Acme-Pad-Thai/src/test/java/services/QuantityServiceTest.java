@@ -24,15 +24,6 @@ public class QuantityServiceTest extends AbstractTest {
 	//Tests
 	
 	@Test
-	public void testCreateQuantity(){
-		Quantity quantity;
-		
-		quantity = quantityService.create();
-		
-		System.out.println("Quantity" + quantity.getId() + "created");
-	}
-	
-	@Test
 	public void testSaveQuantity(){
 		Quantity quantity, saved;
 		
